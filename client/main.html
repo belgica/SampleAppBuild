@@ -1,0 +1,24 @@
+<head>
+  <title>csvexample_app</title>
+</head>
+
+<body>
+  <h1>CSV example app</h1>
+  {{>upload}}
+
+</body>
+
+<template name="upload">
+  <h4 class="page-header">Upload a CSV</h4>
+  
+  {{#unless uploading}}
+    <input type="file" name="uploadCSV">
+  {{else}}
+    <p><i class="fa fa-spin fa-refresh"></i> Uploading files...</p>
+  {{/unless}}
+</template>
+
+
+
+
+
