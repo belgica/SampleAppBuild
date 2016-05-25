@@ -10,7 +10,7 @@ Meteor.methods({
 
     for ( let i = 0; i < data.length; i++ ) {
       let item   = data[ i ],
-          exists = Candidates.findOne( { NameId: item.NameId } );
+          exists = Candidates.findOne( { saleId: item.saleId } );
       // saleId ?
 
       if ( !exists ) {

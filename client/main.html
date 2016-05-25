@@ -5,18 +5,28 @@
 <body>
   <h1>CSV example app</h1>
   {{>upload}}
+  {{>candidateOutput}}
 
 </body>
 
 <template name="upload">
   <h4 class="page-header">Upload a CSV</h4>
-  
+
   {{#unless uploading}}
     <input type="file" name="uploadCSV">
   {{else}}
     <p><i class="fa fa-spin fa-refresh"></i> Uploading files...</p>
   {{/unless}}
 </template>
+
+<template name ="candidateOutput">
+  <p>display values here, but it isn't working and i'm not sure what values are supposed to be returned or where all that happens from CSV to Json array objects.</p>
+
+  {{#each candidate}}
+   {{saleId}} {{date}} {{product}} {{paymentType}}
+   {{/each}}
+</template>
+
 
 
 

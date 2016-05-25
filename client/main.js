@@ -32,10 +32,25 @@ Template.upload.events({
     });
   }
 });
-
+//new code starts here, in case you need to work from a place from where it works
+Template.candidateOutput.helpers({
+  candidate:function(){
+    return Candidates.find();
+  }
+});
 
 /*
+var OutputCandidateDictionary = {
+   CandidateDictionary: function (){
+     return Candidates.find();
+   }
+};
 
+Template.candidateOutput.helpers(OutputCandidateDictionary);
+*/
+/* take a look at the hello helper for counter that is commented out on lines 54 - 58. How does that differ?  charles*/
+
+/*
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
