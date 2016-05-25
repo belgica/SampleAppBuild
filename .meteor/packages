@@ -24,3 +24,5 @@ themeteorchef:bert
 fortawesome:fontawesome
 check
 audit-argument-checks
+accounts-ui
+accounts-password

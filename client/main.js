@@ -1,9 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './main.html';
-
-
 Template.upload.onCreated( () => {
   Template.instance().uploading = new ReactiveVar( false );
 });
@@ -69,5 +66,3 @@ Template.hello.events({
   },
 });
 */
-
-
