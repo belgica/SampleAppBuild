@@ -10,9 +10,9 @@ Meteor.methods({
 
     for ( let i = 0; i < data.length; i++ ) {
       let item   = data[ i ],
-          exists = Candidates.findOne( { saleId: item.saleId } );
-      // saleId ?
-
+          exists = Candidates.findOne( { First_Name: item.First_Name } );
+      // should 'saleId' get changed to 'First Name'? also...is 'First Name' valid name...or should it have an underscore or something 'First_Name' which would also mean changing the columns in the file.bél.
+      // I
       if ( !exists ) {
         Candidates.insert( item );
       } else {
